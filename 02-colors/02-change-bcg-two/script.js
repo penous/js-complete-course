@@ -9,8 +9,12 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  // your code here
+  const run = document.getElementById('run');
 
-    // your code here
-
+  run.addEventListener('click', () => {
+    const input = document.getElementById('color').value;
+    document.body.style.backgroundColor = input;
+  });
 })();

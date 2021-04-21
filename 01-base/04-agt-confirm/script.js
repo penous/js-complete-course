@@ -9,8 +9,19 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  // your code here
+  let state = true;
 
-    // your code here
+  while (state) {
+    const age = prompt('How old are you?');
+    const gender = prompt('What is your gender?');
+    const town = prompt('Where are you from?');
 
+    const result = confirm(
+      `You are a ${gender} from ${town} and you are ${age} years of age?`
+    );
+
+    if (result) state = false;
+  }
 })();

@@ -9,8 +9,23 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  // your code here
+  function* colorGenerator() {
+    var letters = '0123456789ABCDEF';
+    while (true) {
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      yield color;
+    }
+  }
 
-    // your code here
+  const generator = colorGenerator();
+  const run = document.getElementById('run');
 
+  run.addEventListener('click', () => {
+    document.body.style.backgroundColor = generator.next().value;
+  });
 })();

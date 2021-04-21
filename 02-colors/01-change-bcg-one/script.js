@@ -9,8 +9,26 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  // your code here
+  const red = document.getElementById('red');
+  const green = document.getElementById('green');
+  const yellow = document.getElementById('yellow');
+  const blue = document.getElementById('blue');
 
-    // your code here
+  red.addEventListener('click', () => {
+    document.body.style.backgroundColor = 'red';
+  });
 
+  green.addEventListener('click', () => {
+    document.body.style.backgroundColor = 'green';
+  });
+
+  yellow.addEventListener('click', () => {
+    document.body.style.backgroundColor = 'yellow';
+  });
+
+  blue.addEventListener('click', () => {
+    document.body.style.backgroundColor = 'blue';
+  });
 })();
