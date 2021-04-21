@@ -9,8 +9,31 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  // your code here
 
-    // your code here
+  const run = document.getElementById('run');
 
+  run.addEventListener('click', () => {
+    const day = document.getElementById('dob-day').value;
+    const month = document.getElementById('dob-month').value;
+    const year = document.getElementById('dob-year').value;
+    const date = new Date();
+    const currentDay = date.getDate();
+    const currentMonth = date.getMonth();
+    const currentYear = date.getFullYear();
+
+    let age = currentYear - year;
+
+    if (currentMonth < month) {
+      age -= 1;
+    } else if (currentMonth == month) {
+      if (currentDay < day) {
+        console.log('world');
+        age -= 1;
+      }
+    }
+
+    alert(`You are ${age} years of age`);
+  });
 })();
