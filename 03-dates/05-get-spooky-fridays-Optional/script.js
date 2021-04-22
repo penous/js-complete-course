@@ -9,8 +9,20 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  // your code here
+  const run = document.getElementById('run');
 
-    // your code here
+  run.addEventListener('click', () => {
+    const months = [];
+    const year = document.getElementById('year').value;
 
+    [...Array(12)].map((_, i) => {
+      const date = new Date(year, i, 13);
+      if (date.getDay() == 5)
+        months.push(date.toLocaleString('en-GB', { month: 'long' }));
+    });
+
+    alert(months);
+  });
 })();

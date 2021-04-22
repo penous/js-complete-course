@@ -9,12 +9,14 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    document.getElementById("run").addEventListener("click", function() {
-
-        // your code here
-
+(function () {
+  document.getElementById('run').addEventListener('click', function () {
+    // your code here
+    const result = [];
+    [...Array(21)].map((_, i) => {
+      if (Math.sqrt(i) % 1 === 0) result.push(i);
     });
 
+    alert(result.filter((num) => num != 0));
+  });
 })();

@@ -9,8 +9,13 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    // your code here
-
+(function () {
+  // your code here
+  const result = [...Array(100)].map((_, i) => {
+    if (i % 15 === 0) return 'fizzbuzz';
+    if (i % 5 === 0) return 'buzz';
+    if (i % 3 === 0) return 'fizz';
+    return i;
+  });
+  console.log(...result);
 })();
