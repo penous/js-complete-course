@@ -18,8 +18,14 @@
   let hours = date.getHours();
   let min = date.getMinutes();
 
-  if (hours < 17 && min < 30) {
-    return (target.innerHTML = 'Hello');
+  const printEvening = () => (target.innerHTML = 'Good evening');
+  const printHello = () => (target.innerHTML = 'Hello');
+
+  if (hours < 17) {
+    printHello();
+  } else if (hours === 17 && min < 30) {
+    printHello();
+  } else {
+    printEvening();
   }
-  target.innerHTML = 'Good evening';
 })();

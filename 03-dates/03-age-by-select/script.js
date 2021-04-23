@@ -29,7 +29,6 @@
       age -= 1;
     } else if (currentMonth == month) {
       if (currentDay < day) {
-        console.log('world');
         age -= 1;
       }
     }

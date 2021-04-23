@@ -29,7 +29,8 @@
 
   // your code here
   document.getElementById('run').addEventListener('click', () => {
-    const temp = new Set(fruits);
-    console.log([...temp]);
+    // const temp = new Set(fruits);
+    // console.log([...temp]);
+    console.log([...new Set(fruits)]);
   });
 })();

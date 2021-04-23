@@ -17,7 +17,7 @@
     const sum = document.getElementById('sum');
     const avg = document.getElementById('average');
 
-    const arr = [...Array(10)].map(() => Math.floor(Math.random() * 10));
+    const arr = [...Array(10)].map(() => Math.floor(Math.random() * 100));
     const actualSum = arr.reduce((a, b) => a + b, 0);
 
     arr.forEach((num, key) => {
