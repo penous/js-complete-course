@@ -9,8 +9,16 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  // your code here
+  const img = document.querySelector('img');
+  const src = img.src;
 
-    // your code here
-
+  img.addEventListener('mouseover', () => {
+    const hover = img.dataset.hover;
+    img.src = hover;
+  });
+  img.addEventListener('mouseout', () => {
+    img.src = src;
+  });
 })();

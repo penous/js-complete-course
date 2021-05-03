@@ -9,8 +9,13 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
-
-    // your code here
-
+(function () {
+  // your code here
+  const src = document.getElementById('source');
+  const value = src.dataset.image;
+  const target = document.getElementById('target');
+  const img = document.createElement('img');
+  img.src = value;
+  target.appendChild(img);
+  src.remove();
 })();
