@@ -10,5 +10,14 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+  const getData = async () => {
+    const get = await fetch('../../_shared/api.json');
+    const data = await get.json();
+    console.log(...data.heroes);
+  };
+
+  document.getElementById('run').addEventListener('click', () => {
+    getData();
+  });
 })();
