@@ -9,8 +9,17 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
+  // your code here
+  const text = document.getElementById('target');
+  const content = text.textContent;
+  text.innerHTML = '';
+  let counter = 0;
 
-    // your code here
-
+  for (let i of content) {
+    text.innerHTML += `<span  class="fade" style="animation-delay: ${
+      counter * 10
+    }ms" >${i}</span>`;
+    counter++;
+  }
 })();
