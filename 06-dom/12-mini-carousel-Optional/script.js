@@ -29,8 +29,5 @@
   const gen = generator();
   img.src = gen.next().value;
 
-  next.addEventListener('click', () => {
-    img.src = gen.next().value;
-    console.log(img.src);
-  });
+  next.addEventListener('click', () => (img.src = gen.next().value));
 })();

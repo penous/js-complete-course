@@ -10,5 +10,22 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  // your code here
+  const getData = async (callback) => {
+    const data = await fetch('http://localhost:3000/heroes');
+    const result = await data.json();
+    callback(result);
+  };
+
+  document.getElementById('run').onclick = () => {
+    const heroId = parseInt(document.getElementById('hero-id').value);
+    getData((data) => {
+      for (let [i, hero] of data.entries()) {
+        if (hero.id === heroId) {
+          data.splice(i, 1);
+        }
+      }
+      console.log(data);
+    });
+  };
 })();
